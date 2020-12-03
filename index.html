@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>課題②</title>
+</head>
+<style>
+  #fizz {
+    width: 13em;
+    margin-left: 12px;
+  }
+
+  #buzz {
+    width: 13em;
+    margin-left: 4px;
+  }
+
+  .btn {
+    margin-bottom: 20px;
+  }
+
+  #answer p {
+  font-size: large;
+  margin: auto;
+  }
+</style>
+
+<body>
+  <div>
+    <h1>FizzBuzz問題</h1>
+      <p>FizzNum:<input type="text" id="fizz" value="" placeholder="整数値を入力してください"></p>
+
+      <p>BuzzNum:<input type="text" id="buzz" placeholder="整数値を入力してください"></p>
+
+      <input class="btn" type="button" value="実行" onclick="addBtn()">
+  </div>
+  
+  <div>【出力】</div>
+  <div id="answer"></div>
+  <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>

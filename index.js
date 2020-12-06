@@ -4,11 +4,11 @@ function addBtn() {
   const fizz = document.getElementById("fizz").value;
   const buzz = document.getElementById("buzz").value;
   const answer = document.getElementById("answer");
-  fizz - 0;
-  buzz - 0;
+  parseFloat(fizz);
+  parseFloat(buzz);
 
 
-  const eraseFizzBuzz = () => {  
+  const eraseNode = () => {  
     if (answer.hasChildNodes()) {
       for(let i = answer.childNodes.length -1; i >= 0; i --) {
         answer.removeChild(answer.childNodes[i]);
@@ -30,21 +30,21 @@ function addBtn() {
     }
   };
   
-  const integerCheck = (str) => {
+  const checkInteger = (str) => {
     const reg = new RegExp(/^[0-9]+$/);
     const res = reg.test(str);
     return res;
   };
   
-  if (!integerCheck(fizz) && !integerCheck(buzz)) {
+  if (!checkInteger(fizz) && !checkInteger(buzz)) {
     answer.textContent = ("");
     answer.textContent = ("整数値を入力してください");
-  } else if (!integerCheck(fizz) || !integerCheck(buzz)) {
+  } else if (!checkInteger(fizz) || !checkInteger(buzz)) {
     answer.textContent = ("");
     answer.textContent = ("整数値を入力してください");
-  } else if (integerCheck(fizz) && integerCheck(buzz)) {
+  } else if (checkInteger(fizz) && checkInteger(buzz)) {
     answer.textContent = ("");
-    eraseFizzBuzz();
+    eraseNode();
     culculationFizzBuzz();
   };
 };

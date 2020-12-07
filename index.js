@@ -1,12 +1,12 @@
 
 
 function addBtn() { 
-  const fizz = document.getElementById("fizz").value;
-  const buzz = document.getElementById("buzz").value;
+  const nanFizz = document.getElementById("fizz").value;
+  const nanBuzz = document.getElementById("buzz").value;
   const answer = document.getElementById("answer");
-  parseFloat(fizz);
-  parseFloat(buzz);
-
+  // 文字列型を数値型に変換
+  const fizz = parseFloat(nanFizz);
+  const buzz = parseFloat(nanBuzz);
 
   const eraseNode = () => {  
     if (answer.hasChildNodes()) {
